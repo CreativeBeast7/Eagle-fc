@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eagle FC</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Basic CSS for animations and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        form {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        form input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        form button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .user-cart {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .user-cart a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        #banner {
+            text-align: center;
+            padding: 50px;
+            background-color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: slideInFromLeft 1s ease-in-out;
+        }
+
+        #banner p {
+            font-size: 1.2em;
+            animation: slideInFromRight 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .matches {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .match {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 45%;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .match:hover {
+            transform: scale(1.05);
+        }
+
+        .match img {
+            height: 40px;
+            margin: 10px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .popup.active {
+            display: block;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="eagle fc.png" alt="Eagle FC Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="team.html">TEAM INFORMATION</a></li>
+                <li><a href="fixtures.html">FIXTURES & RESULTS</a></li>
+                <li><a href="club-information.html">CLUB INFORMATION</a></li>
+                <li><a href="about-our-village.html">ABOUT OUR VILLAGE</a></li>
+            </ul>
+            <form action="/search" method="get">
+                <input type="text" name="search" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+            <div class="user-cart">
+                <a href="#account">Account</a>
+                <a href="#cart">Cart</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <h1>Eagle FC</h1>
+            <p>Welcome to the official Eagle FC website.</p>
+        </section>
+        <section id="upcoming-matches">
+            <h2>Upcoming Matches</h2>
+            <div class="matches">
+                <div class="match" onclick="showPopup('match1')">
+                    <img src="Odisha_FC_logo.svg.png" alt="Eagle FC Logo">
+                    <span>vs</span>
+                    <img src="Hyderabad_Football_Club.svg.png" alt="Opponent Logo">
+                    <p>Date: 2024-10-15</p>
+                    <p>Tickets Available</p>
+                </div>
+                <!-- Add more matches as needed -->
+            </div>
+        </section>
+        <section id="match-results">
+            <h2>Match Results</h2>
+            <div class="matches">
+                <div class="match" onclick="showPopup('result1')">
+                    <img src="Odisha_FC_logo.svg.png" alt="Eagle FC Logo">
+                    <span>vs</span>
+                    <img src="Mumbai_City_FC_logo.svg.png" alt="Opponent Logo">
+                    <p>Score: 3-0</p>
+                    <p>Highlights Available</p>
+                </div>
+                <div class="match" onclick="showPopup('result2')">
+                    <img src="Odisha_FC_logo.svg.png" alt="Eagle FC Logo">
+                    <span>vs</span>
+                    <img src="FC_Goa_logo.svg.png" alt="Opponent Logo">
+                    <p>Score: 3-0</p>
+                    <p>Highlights Available</p>
+                </div>
+                <!-- Add more results as needed -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+
+    <!-- Popup for match summary -->
+    <div id="match1" class="popup">
+        <span class="close" onclick="closePopup('match1')">×</span>
+        <h2>Match Summary</h2>
+        <p>Details about the match...</p>
+    </div>
+    <div id="result1" class="popup">
+        <span class="close" onclick="closePopup('result1')">×</span>
+        <h2>Match Summary</h2>
+        <p>Nickson score 2 goals become the player of the match and sukesh score 1 goal, GK hainz whith the good saves and clean sheet.</p>
+    </div>
+    <div id="result2" class="popup">
+        <span class="close" onclick="closePopup('result2')">×</span>
+        <h2>Match Summary</h2>
+        <p>Atheesh score hatrick and become the man of the match . Once again Hainz show his skills and have clean sheet...</p>
+    </div>
+
+    <script>
+        function showPopup(id) {
+            document.getElementById(id).classList.add('active');
+        }
+        function closePopup(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+    </script>
+</body>
+</html>

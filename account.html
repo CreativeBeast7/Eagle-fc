@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eagle FC - Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for the login form */
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .login-container .cancelbtn {
+            background-color: #f44336;
+        }
+
+        .login-container .cancelbtn:hover {
+            background-color: #d32f2f;
+        }
+
+        .login-container .psw {
+            float: right;
+            padding-top: 10px;
+        }
+
+        .login-container .psw a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .login-container .psw a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="eagle fc.png" alt="Eagle FC Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="team.html">TEAM INFORMATION</a></li>
+                <li><a href="fixtures.html">FIXTURES & RESULTS</a></li>
+                <li><a href="club-information.html">CLUB INFORMATION</a></li>
+                <li><a href="about-our-village.html">ABOUT OUR VILLAGE</a></li>
+            </ul>
+            <form action="/search" method="get">
+                <input type="text" name="search" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+            <div class="user-cart">
+                <a href="account.html">Account</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <h1>Eagle FC</h1>
+            <p>Welcome to the official Eagle FC website.</p>
+        </section>
+        <section class="login-container">
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <div class="psw">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eagle FC - Team Information</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Basic CSS for animations and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        form {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        form input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        form button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .user-cart {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .user-cart a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        #banner {
+            text-align: center;
+            padding: 50px;
+            background-color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: slideInFromLeft 1s ease-in-out;
+        }
+
+        #banner p {
+            font-size: 1.2em;
+            animation: slideInFromRight 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .team-section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .player-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .player-card {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: transform 0.3s;
+        }
+
+        .player-card:hover {
+            transform: scale(1.05);
+        }
+
+        .player-card h3 {
+            margin: 10px 0;
+        }
+
+        .player-card p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="eagle fc.png" alt="Eagle FC Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="team.html">TEAM INFORMATION</a></li>
+                <li><a href="fixtures.html">FIXTURES & RESULTS</a></li>
+                <li><a href="club-information.html">CLUB INFORMATION</a></li>
+                <li><a href="about-our-village.html">ABOUT OUR VILLAGE</a></li>
+            </ul>
+            <form action="/search" method="get">
+                <input type="text" name="search" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+            <div class="user-cart">
+                <a href="#account">Account</a>
+                <a href="#cart">Cart</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <h1>Eagle FC</h1>
+            <p>Welcome to the official Eagle FC website.</p>
+        </section>
+        <section id="team-info">
+            <div class="team-section">
+                <h2>First Team Players</h2>
+                <div class="player-list">
+                    <div class="player-card">
+                        <h3>Hainz MJ</h3>
+                        <p>Position: Goalkeeper</p>
+                        <p>Number: 13</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                    <div class="player-card">
+                        <h3>Antony Raju</h3>
+                        <p>Position: Defender</p>
+                        <p>Number: 3</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                    <div class="player-card">
+                        <h3>Mukesh Hendry</h3>
+                        <p>Position: Defender</p>
+                        <p>Number: 29</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                    <div class="player-card">
+                        <h3>Sachin</h3>
+                        <p>Position: Defender</p>
+                        <p>Number: 26</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                    <div class="player-card">
+                        <h3>Sukesh</h3>
+                        <p>Position: Forward</p>
+                        <p>Number: 18</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                    <div class="player-card">
+                        <h3>Atheesh John</h3>
+                        <p>Position: Midfielder</p>
+                        <p>Number: 23</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                    <div class="player-card">
+                        <h3>Aniston</h3>
+                        <p>Position: Midfielder</p>
+                        <p>Number: 27</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                    <div class="player-card">
+                        <h3>Beniston</h3>
+                        <p>Position: Forward</p>
+                        <p>Number: 17</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                    <div class="player-card">
+                        <h3>Tinu</h3>
+                        <p>Position: Forward</p>
+                        <p>Number: 45</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                    <div class="player-card">
+                        <h3>Bijosh</h3>
+                        <p>Position: Forward</p>
+                        <p>Number: 7</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                    <div class="player-card">
+                        <h3>Bebin</h3>
+                        <p>Position: Defender</p>
+                        <p>Number: 12</p>
+                        <p>Nationality: IND</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>

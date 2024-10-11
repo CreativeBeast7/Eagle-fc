@@ -1,0 +1,622 @@
+/* Basic CSS for animations and styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+form {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+form input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.user-cart {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.user-cart a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#banner {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+#banner p {
+    font-size: 1.2em;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.matches {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.match {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 45%;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.match:hover {
+    transform: scale(1.05);
+}
+
+.match img {
+    height: 40px;
+    margin: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+/* Basic CSS for animations and styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+form {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+form input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.user-cart {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.user-cart a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#banner {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+#banner p {
+    font-size: 1.2em;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.team-section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.player-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.player-card {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s;
+}
+
+.player-card:hover {
+    transform: scale(1.05);
+}
+
+.player-card h3 {
+    margin: 10px 0;
+}
+
+.player-card p {
+    margin: 5px 0;
+}
+/* Basic CSS for animations and styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+form {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+form input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.user-cart {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.user-cart a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#banner {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+#banner p {
+    font-size: 1.2em;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.fixtures-section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fixtures-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.match-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.match-card {
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s;
+}
+
+.match-card:hover {
+    transform: scale(1.05);
+}
+
+.match-card h3 {
+    margin: 10px 0;
+}
+
+.match-card p {
+    margin: 5px 0;
+}
+/* Basic CSS for animations and styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+/* Basic CSS for animations and styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+form {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+form input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius:
+}
+
+
+    /* Additional CSS for the login form */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.login-container .cancelbtn {
+    background-color: #f44336;
+}
+
+.login-container .cancelbtn:hover {
+    background-color: #d32f2f;
+}
+
+.login-container .psw {
+    float: right;
+    padding-top: 10px;
+}
+
+.login-container .psw a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-container .psw a:hover {
+    text-decoration: underline;
+}

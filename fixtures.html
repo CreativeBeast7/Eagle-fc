@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eagle FC - Fixtures & Results</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Basic CSS for animations and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        form {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        form input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        form button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .user-cart {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .user-cart a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        #banner {
+            text-align: center;
+            padding: 50px;
+            background-color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: slideInFromLeft 1s ease-in-out;
+        }
+
+        #banner p {
+            font-size: 1.2em;
+            animation: slideInFromRight 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .fixtures-section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fixtures-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .match-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .match-card {
+            width: 80%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: transform 0.3s;
+        }
+
+        .match-card:hover {
+            transform: scale(1.05);
+        }
+
+        .match-card h3 {
+            margin: 10px 0;
+        }
+
+        .match-card p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="eagle fc.png" alt="Eagle FC Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="team.html">TEAM INFORMATION</a></li>
+                <li><a href="fixtures.html">FIXTURES & RESULTS</a></li>
+                <li><a href="club-information.html">CLUB INFORMATION</a></li>
+                <li><a href="about-our-village.html">ABOUT OUR VILLAGE</a></li>
+            </ul>
+            <form action="/search" method="get">
+                <input type="text" name="search" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+            <div class="user-cart">
+                <a href="account.html">Account</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <h1>Eagle FC</h1>
+            <p>Welcome to the official Eagle FC website.</p>
+        </section>
+        <section id="fixtures-info">
+            <div class="fixtures-section">
+                <h2>Fixtures & Results</h2>
+                <div class="match-list">
+                    <div class="match-card">
+                        <h3>Upcoming Match</h3>
+                        <p>Eagle FC vs Hyderabad FC</p>
+                        <p>Date: October, 2024</p>
+                        <p>Time: 4:30 PM</p>
+                        <p>Venue: St. Mary's Ground</p>
+                    </div>
+                    <div class="match-card">
+                        <h3>Past Matches</h3>
+                        <p>Eagle FC vs Mumbai</p>
+                        <p>Date: October 8, 2024</p>
+                        <p>Result: Eagle FC 3 - 0 Mumbai</p>
+                    </div>
+                    <div class="match-card">
+                        <p>Eagle FC vs FC Goa</p>
+                        <p>Date: October 10, 2024</p>
+                        <p>Result: Eagle FC 3 - 0 Mumbai</p>
+                    </div>
+                    <!-- Space for more future matches -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>

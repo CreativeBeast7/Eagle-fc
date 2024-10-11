@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eagle FC - Club Information</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Basic CSS for animations and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        form {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        form input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        form button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .user-cart {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .user-cart a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        #banner {
+            text-align: center;
+            padding: 50px;
+            background-color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: slideInFromLeft 1s ease-in-out;
+        }
+
+        #banner p {
+            font-size: 1.2em;
+            animation: slideInFromRight 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .club-section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .club-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .club-section p {
+            margin: 10px 0;
+        }
+
+        .achievements {
+            margin-top: 20px;
+        }
+
+        .achievements h3 {
+            margin-bottom: 10px;
+        }
+
+        .achievements ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .achievements ul li {
+            margin: 5px 0;
+        }
+
+        .social-media {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="eaglefc-logo.png" alt="Eagle FC Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="team.html">TEAM INFORMATION</a></li>
+                <li><a href="fixtures.html">FIXTURES & RESULTS</a></li>
+                <li><a href="club-information.html">CLUB INFORMATION</a></li>
+                <li><a href="about-our-village.html">ABOUT OUR VILLAGE</a></li>
+            </ul>
+            <form action="/search" method="get">
+                <input type="text" name="search" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+            <div class="user-cart">
+                <a href="account.html">Account</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <h1>Eagle FC</h1>
+            <p>Welcome to the official Eagle Fc website.</p>
+        </section>
+        <section id="club-info">
+            <div class="club-section">
+                <h2>History & Heritage</h2>
+                <p>Founded in 2012, EagleFC is a passionate and dedicated football club based in Vizhinjam. Over the years, we have risen to become a formidable team in the local football scene. With an unyielding spirit and a commitment to excellence, we have proudly claimed victory in 5 major tournaments and secured runner-up positions in 4 others. Our journey is driven by teamwork, discipline, and a shared love for the game. As we continue to grow, we remain focused on achieving greater heights, always staying true to our core values of sportsmanship and community. Join us as we soar to new challenges and victories!</p>
+                <section class="achievements">
+                    <div class="container honours-grid">
+                        
+                        <!-- Champions Section -->
+                        <div class="honour">
+                            <img width="150px" src="champions.png" alt="Champions" class="circle">
+                            <h3>Champions</h3>
+                            <p>EagleFC has proudly claimed 5 championship titles, with one in 2019, two in 2020, and two more in 2021. These victories reflect our team's consistent growth and dominance on the field over the years.</p>
+                        </div>
+            
+                        <!-- Runner-up Section -->
+                        <div class="honour">
+                            <img width="150px" src="runnerup.png" alt="Runner-up" class="circle">
+                            <h3>Runner-up</h3>
+                            <p>We have also finished as runners-up in 4 tournaments, once in 2020 and three times in 2021. These close finishes highlight our team's competitive spirit and determination.</p>
+                        </div>
+            
+                        <!-- Born to Win Section -->
+                        <div class="honour">
+                            <img width="150px" src="efc.png" alt="Born to Win" class="circle">
+                            <h3>Born to Win</h3>
+                            <p>At EagleFC, we believe in trusting the process. Consistent effort and dedication lead to success. Every challenge we face strengthens our resolve, and we are confident that our hard work will continue to yield great results.</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.instagram.com/eagle_fc_vizhinjam/">Instagram</a>
+                    <a href="https://www.facebook.com/Eaglessports7club">Facebook</a>
+                    <a href="mailto:eaglesfcvizhinjam@gmail.com">Gmail</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>
