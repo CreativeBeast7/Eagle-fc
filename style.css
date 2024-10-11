@@ -620,3 +620,26 @@ form button {
 .login-container .psw a:hover {
     text-decoration: underline;
 }
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .honours-grid, .team-grid, .village-grid {
+        flex-direction: column;
+    }
+
+    .honour, .player, .village {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
