@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eagle FC - Fixtures & Results</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Eagle FC Matchday</title>
     <style>
+        /* Add your existing styles here */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,13 +15,14 @@
         }
 
         header {
-            background: linear-gradient(135deg, #fff, #b3d7e7); /* White to light blue gradient */
-            color: #333;
+            background: linear-gradient(to right, #ffffff, #ADD8E6);
+            color: black; /* Set text color to black */
             padding: 10px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            height: 60px; /* Added fixed height for rectangle shape */
         }
 
         header img {
@@ -41,7 +43,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #333; /* Updated to match header color */
+            color: black; /* Set link color to black */
             transition: color 0.3s;
         }
 
@@ -80,7 +82,7 @@
         }
 
         .user-cart a {
-            color: #333; /* Updated to match header color */
+            color: black; /* Set account link color to black */
             text-decoration: none;
             margin-left: 10px;
         }
@@ -121,55 +123,40 @@
             from { transform: translateX(100%); }
             to { transform: translateX(0); }
         }
-
-        .fixtures-section {
+        section {
             padding: 20px;
-            background-color: #fff;
-            margin: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .fixtures-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #007BFF;
-        }
-
-        .match-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
         }
 
         .match-card {
-            width: 80%;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 5px;
-            background: linear-gradient(135deg, #007BFF, #00FF87);
-            color: white;
+            background: white;
+            border: 3px solid #00ddff;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 15px;
             position: relative;
-            overflow: hidden;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.2s;
         }
 
         .match-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
         }
 
-        .match-card img {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 40px;
-            height: 40px;
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
         }
 
-        .match-card h3, .match-card p {
-            margin-left: 60px;
+        .match-logo {
+            width: 50px; /* Adjust size as needed */
+            margin-right: 10px;
+        }
+
+        .match-info {
+            display: flex;
+            align-items: center;
         }
 
         .match-card-popup {
@@ -178,59 +165,28 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 80%;
-            background-color: #fff;
+            background: white;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-            z-index: 10;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            z-index: 1000;
         }
 
         .popup-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .popup-header h3 {
-            margin: 0;
         }
 
         .popup-close {
             cursor: pointer;
-            font-size: 1.5em;
-        }
-
-        .popup-images {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            font-size: 20px;
         }
 
         .popup-images img {
-            width: calc(33.33% - 10px);
-            border-radius: 5px;
-        }
-
-        @media (max-width: 768px) {
-            .match-card {
-                width: 90%;
-            }
-
-            .popup-images img {
-                width: calc(50% - 10px);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .match-card {
-                width: 100%;
-            }
-
-            .popup-images img {
-                width: 100%;
-            }
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -259,86 +215,102 @@
             <h1>Eagle FC</h1>
             <p>Welcome to the official Eagle FC website.</p>
         </section>
-        <section id="fixtures-info">
-            <div class="fixtures-section">
-                <h2>Fixtures & Results</h2>
-                <div class="match-list">
-                    <div class="match-card" onclick="showPopup(1)">
-                        <img src="Hyderabad_Football_Club.svg.png" alt="Hyderabad FC Logo">
-                        <h3>Upcoming Match</h3>
-                        <p>Eagle FC vs Hyderabad FC</p>
-                        <p>Date: October 15, 2024</p>
-                        <p>Time: 4:30 PM</p>
-                        <p>Venue: St. Mary's Ground</p>
+
+    <main>
+        <section>
+            <h2>Upcoming Matches</h2>
+            <div class="match-card" onclick="showPopup(3)">
+                <div class="match-header">
+                    <div class="match-info">
+                        <img class="match-logo" src="Odisha_FC_logo.svg.png" alt="Eagle FC Logo"> <!-- Eagle FC Logo -->
                     </div>
-                    <div class="match-card" onclick="showPopup(2)">
-                        <img src="Mumbai_City_FC_logo.svg.png" alt="Mumbai FC Logo">
-                        <h3>Past Match</h3>
-                        <p>Eagle FC vs Mumbai</p>
-                        <p>Date: October 8, 2024</p>
-                        <p>Result: Eagle FC 3 - 0 Mumbai</p>
-                    </div>
-                    <div class="match-card" onclick="showPopup(3)">
-                        <img src="FC_Goa_logo.svg.png" alt="Goa FC Logo">
-                        <p>Eagle FC vs FC Goa</p>
-                        <h3>Past Match</h3>
-                        <p>Date: October 10, 2024</p>
-                        <p>Result: Eagle FC 3 - 0 FC Goa</p>
+                    <div class="match-info">
+                        <img class="match-logo" src="Hyderabad_Football_Club.svg.png" alt="hyderabad_fc_logo"> <!-- Opponent Logo -->
                     </div>
                 </div>
+                <p>Date: October 16, 2024</p>
+                <p>Time: 4:00 PM</p>
+                <p>Venue: St. Mary's Ground</p>
             </div>
         </section>
 
-        <!-- Match Popup -->
-        <div class="match-card-popup" id="match-popup-1">
+        <section>
+            <h2>Past Matches</h2>
+            <div class="match-card" onclick="showPopup(2)">
+                <div class="match-header">
+                    <div class="match-info">
+                        <img class="match-logo" src="Odisha_FC_logo.svg.png" alt="Eagle FC Logo"> <!-- Eagle FC Logo -->
+                    </div>
+                    <div class="match-info">
+                        <img class="match-logo" src="Mumbai_City_FC_logo.svg.png" alt="Mumbai Logo"> <!-- Opponent Logo -->
+                    </div>
+                </div>
+                <p>Date: October 8, 2024</p>
+                <p>Result: Eagle FC 3 - 0 Mumbai</p>
+            </div>
+            <div class="match-card" onclick="showPopup(1)">
+                <div class="match-header">
+                    <div class="match-info">
+                        <img class="match-logo" src="Odisha_FC_logo.svg.png" alt="Eagle FC Logo"> <!-- Eagle FC Logo -->
+                    </div>
+                    <div class="match-info">
+                        <img class="match-logo" src="FC_Goa_logo.svg.png" alt="Hyderabad FC Logo"> <!-- Opponent Logo -->
+                    </div>
+                </div>
+                <p>Date: October 15, 2024</p>
+                <p>Result: Eagle FC 3 - 0 goa</p>
+            </div>
+        </section>
+
+        <div id="match-popup-1" class="match-card-popup">
             <div class="popup-header">
                 <h3>Eagle FC vs Hyderabad FC</h3>
-                <span class="popup-close" onclick="closePopup(1)">×</span>
+                <span class="popup-close" onclick="closePopup(1)">&times;</span>
             </div>
             <div class="popup-content">
                 <p>Date: October 15, 2024</p>
                 <p>Time: 4:30 PM</p>
                 <p>Venue: St. Mary's Ground</p>
                 <div class="popup-images">
-                    <img src="match1_image1.jpg" alt="Match Image 1">
-                    <img src="match1_image2.jpg" alt="Match Image 2">
-                    <img src="match1_image3.jpg" alt="Match Image 3">
+                    <img src="eagle_vs_hyderabad.jpg" alt="Eagle FC vs Hyderabad FC">
+                    <img src="hyderabad_fc_crowd.jpg" alt="Hyderabad FC Crowd">
+                    <img src="eagle_fc_celebration.jpg" alt="Eagle FC Celebration">
                 </div>
             </div>
         </div>
-
-        <div class="match-card-popup" id="match-popup-2">
+        <div id="match-popup-2" class="match-card-popup">
             <div class="popup-header">
                 <h3>Eagle FC vs Mumbai</h3>
-                <span class="popup-close" onclick="closePopup(2)">×</span>
+                <span class="popup-close" onclick="closePopup(2)">&times;</span>
             </div>
             <div class="popup-content">
                 <p>Date: October 8, 2024</p>
                 <p>Result: Eagle FC 3 - 0 Mumbai</p>
                 <div class="popup-images">
-                    <img src="match2_image1.jpg" alt="Match Image 1">
-                    <img src="match2_image2.jpg" alt="Match Image 2">
-                    <img src="match2_image3.jpg" alt="Match Image 3">
+                    <img src="eagle_fc_victory.jpg" alt="Eagle FC Victory">
+                    <img src="mumbai_fc_celebration.jpg" alt="Mumbai FC Celebration">
+                    <img src="eagle_fc_fans.jpg" alt="Eagle FC Fans">
                 </div>
             </div>
         </div>
-
-        <div class="match-card-popup" id="match-popup-3">
+        <div id="match-popup-3" class="match-card-popup">
             <div class="popup-header">
-                <h3>Eagle FC vs FC Goa</h3>
-                <span class="popup-close" onclick="closePopup(3)">×</span>
+                <h3>Eagle FC vs Kerala Blasters</h3>
+                <span class="popup-close" onclick="closePopup(3)">&times;</span>
             </div>
             <div class="popup-content">
-                <p>Date: October 10, 2024</p>
-                <p>Result: Eagle FC 3 - 0 FC Goa</p>
+                <p>Date: October 22, 2024</p>
+                <p>Time: 7:00 PM</p>
+                <p>Venue: St. Mary's Ground</p>
                 <div class="popup-images">
-                    <img src="match3_image1.jpg" alt="Match Image 1">
-                    <img src="match3_image2.jpg" alt="Match Image 2">
-                    <img src="match3_image3.jpg" alt="Match Image 3">
+                    <img src="eagle_vs_kerala.jpg" alt="Eagle FC vs Kerala Blasters">
+                    <img src="kerala_blasters_fans.jpg" alt="Kerala Blasters Fans">
+                    <img src="eagle_fc_training.jpg" alt="Eagle FC Training">
                 </div>
             </div>
         </div>
     </main>
+
     <script>
         function showPopup(matchId) {
             document.getElementById('match-popup-' + matchId).style.display = 'block';
@@ -347,13 +319,7 @@
         function closePopup(matchId) {
             document.getElementById('match-popup-' + matchId).style.display = 'none';
         }
-
-        // Close all popups if clicked outside
-        window.onclick = function(event) {
-            if (event.target.classList.contains('match-card-popup')) {
-                closePopup(event.target.id.split('-')[2]);
-            }
-        }
     </script>
 </body>
+
 </html>

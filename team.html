@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eagle FC - Team Information</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eagle FC - Team Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
-        /* Basic CSS for animations and styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #0c0b2a, #3d779c, #94134c); /* Gradient background */
-            color: #fff; /* Default text color */
+            background: linear-gradient(135deg, #0c0b2a, #3d779c, #94134c);
         }
 
         header {
-            background: linear-gradient(135deg, #ffffff, #80b3ff); /* White to light blue gradient */
-            color: #000; /* Dark text for contrast */
+            background: linear-gradient(135deg, #fff, #b3d7e7); /* White to light blue gradient */
+            color: #333;
             padding: 10px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Box shadow effect */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         header img {
@@ -35,7 +34,6 @@
             list-style-type: none;
             justify-content: center;
             padding: 0;
-            margin: 0;
         }
 
         nav ul li {
@@ -44,12 +42,12 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #000; /* Dark text color for links */
+            color: #333; /* Updated to match header color */
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #007BFF; /* Change link color on hover */
+            color: #007BFF;
         }
 
         form {
@@ -67,14 +65,14 @@
             padding: 5px 10px;
             border: none;
             border-radius: 3px;
-            background-color: #007BFF; /* Button color */
+            background-color: #007BFF;
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         form button:hover {
-            background-color: #0056b3; /* Darker button on hover */
+            background-color: #0056b3;
         }
 
         .user-cart {
@@ -83,34 +81,32 @@
         }
 
         .user-cart a {
-            color: #000; /* Dark text color for account link */
+            color: #333; /* Updated to match header color */
             text-decoration: none;
             margin-left: 10px;
         }
 
         #banner {
             text-align: center;
-            padding: 40px; /* Padding inside the banner */
-            margin: 20px 0; /* Margin for separation */
-            background: linear-gradient(135deg, #007BFF, #80b3ff); /* Blue gradient for the banner */
-            border-radius: 8px; /* Rounded corners for the banner */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Box shadow effect */
+            padding: 30px; /* Reduced padding for a more rectangular look */
+            background: linear-gradient(135deg, #b3d7e7, #ffffff); /* Banner gradient */
             animation: fadeIn 2s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Box shadow for the banner */
+            border-radius: 10px; /* Rounded corners for the banner */
+            margin: 20px; /* Added margin around the banner */
+            width: calc(100% - 40px); /* Full width minus margin */
         }
 
         #banner h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: black; /* Heading color */
             animation: slideInFromLeft 1s ease-in-out;
         }
 
         #banner p {
             font-size: 1.2em;
-            color: #333; /* Subtitle color */
             animation: slideInFromRight 1s ease-in-out;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -126,140 +122,60 @@
             to { transform: translateX(0); }
         }
 
-        .team-section {
+        .squad-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
             padding: 20px;
-            margin: 20px;
-            background: linear-gradient(135deg, #007BFF, #FFFFFF); /* Blue to White gradient */
-            border-radius: 8px; /* Rounded corners for the team section */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .team-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: navy; /* Navy blue color for the heading */
-        }
-
-        .player-list {
+        .player-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        .player-card {
-            width: 200px;
-            margin: 10px;
+        .player-image img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .player-info {
+            color: #fff;
+        }
+
+        .player-number {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .player-name {
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+
+        .player-country img {
+            width: 20px;
+            height: 20px;
+        }
+
+        footer {
+            background-color: #00264d;
             text-align: center;
-            padding: 10px;
-            border-radius: 5px;
-            transition: transform 0.3s;
-            color: white; /* Default text color for player cards */
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
 
-        .player-card h3 {
-            margin: 10px 0;
-        }
-
-        .player-card p {
-            margin: 5px 0;
-        }
-
-        /* Position Specific Background Colors */
-        .goalkeeper {
-            background: linear-gradient(135deg, #000, #007BFF); /* Black and Blue for Goalkeeper */
-        }
-
-        .defender {
-            background: linear-gradient(135deg, #000, #28A745); /* Black and Green for Defender */
-        }
-
-        .midfielder {
-            background: linear-gradient(135deg, #000, #FFC107); /* Black and Yellow for Midfielder */
-        }
-
-        .forward {
-            background: linear-gradient(135deg, #000, #DC3545); /* Black and Red for Forward */
-        }
-
-        .player-card:hover {
-            transform: scale(1.05);
-        }
-
-        /* Media queries for responsiveness */
-        @media (max-width: 1024px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .player-list {
-                justify-content: center;
-            }
-
-            .player-card {
-                width: 150px; /* Smaller player cards for tablets */
-            }
-
-            #banner h1 {
-                font-size: 2em;
-            }
-
-            #banner p {
-                font-size: 1em;
-            }
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav ul {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .player-list {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .player-card {
-                width: 100%; /* Full-width player cards for mobile */
-                max-width: 400px; /* Keep a max width */
-            }
-
-            #banner {
-                padding: 30px;
-            }
-
-            #banner h1 {
-                font-size: 1.8em;
-            }
-
-            #banner p {
-                font-size: 0.9em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #banner h1 {
-                font-size: 1.5em;
-            }
-
-            #banner p {
-                font-size: 0.8em;
-            }
-
-            .team-section {
-                margin: 10px;
-                padding: 10px;
-            }
-
-            .player-card {
-                padding: 5px;
-            }
+        footer p {
+            margin: 0;
+            color: #fff;
         }
     </style>
 </head>
@@ -286,78 +202,177 @@
     <main>
         <section id="banner">
             <h1>Eagle FC</h1>
-            <p>Welcome to the official team information page!</p>
+            <p>Welcome to the official Eagle FC website.</p>
         </section>
-        <section class="team-section">
-            <h2>Our Squad</h2>
-            <div class="player-list">
-                <div class="player-card goalkeeper">
-                    <h3>Hainz MJ</h3>
-                    <p>Position: Goalkeeper</p>
-                    <p>Number: 13</p>
-                    <p>Country: India (IND)</p>
+
+        <section class="squad-section">
+            
+            <!-- Player 1 -->
+            <div class="player-box">
+                <div class="player-image">
+                    <img src="player1.jpg" alt="Player Name">
                 </div>
-                <div class="player-card defender">
-                    <h3>Antony Raju</h3>
-                    <p>Position: Defender</p>
-                    <p>Number: 3</p>
-                    <p>Country: India (IND)</p>
-                </div>
-                <div class="player-card defender">
-                    <h3>Mukesh Hendry</h3>
-                    <p>Position: Defender</p>
-                    <p>Number: 29</p>
-                    <p>Country: India (IND)</p>
-                </div>
-                <div class="player-card defender">
-                    <h3>Sachin</h3>
-                    <p>Position: Defender</p>
-                    <p>Number: 26</p>
-                    <p>Country: India (IND)</p>
-                </div>
-                <div class="player-card forward">
-                    <h3>Sukesh</h3>
-                    <p>Position: Forward</p>
-                    <p>Number: 18</p>
-                    <p>Country: India (IND)</p>
-                </div>
-                <div class="player-card midfielder">
-                    <h3>Atheesh John</h3>
-                    <p>Position: Midfielder</p>
-                    <p>Number: 23</p>
-                    <p>Country: India (IND)</p>
-                </div>
-                <div class="player-card midfielder">
-                    <h3>Aniston</h3>
-                    <p>Position: Midfielder</p>
-                    <p>Number: 27</p>
-                    <p>Country: India (IND)</p>
-                </div>
-                <div class="player-card forward">
-                    <h3>Beniston</h3>
-                    <p>Position: Forward</p>
-                    <p>Number: 17</p>
-                    <p>Country: India (IND)</p>
-                </div>
-                <div class="player-card forward">
-                    <h3>Tinu</h3>
-                    <p>Position: Forward</p>
-                    <p>Number: 45</p>
-                    <p>Country: India (IND)</p>
-                </div>
-                <div class="player-card forward">
-                    <h3>Bijosh</h3>
-                    <p>Position: Forward</p>
-                    <p>Number: 7</p>
-                    <p>Country: India (IND)</p>
-                </div>
-                <div class="player-card defender">
-                    <h3>Bebin</h3>
-                    <p>Position: Defender</p>
-                    <p>Number: 12</p>
-                    <p>Country: India (IND)</p>
+                <div class="player-info">
+                    <span class="player-number">13</span>
+                    <span class="player-name">Hainz MJ</span>
+                    <span class="player-country">
+                        <img src="india-flag.png.png" alt="IND">
+                    </span>
+                    <span class="player-position">Goalkeeper</span>
                 </div>
             </div>
+
+        <!-- Player 2 -->
+        <div class="player-box">
+            <div class="player-image">
+                <img src="antony-raju.png" alt="Antony Raju">
+            </div>
+            <div class="player-info">
+                <span class="player-number">3</span>
+                <span class="player-name">Antony Raju</span>
+                <span class="player-country">
+                    <img src="india-flag.png.png" alt="India Flag">
+                </span>
+                <span class="player-position">Defender</span>
+            </div>
+        </div>
+
+        <!-- Player 3 -->
+        <div class="player-box">
+            <div class="player-image">
+                <img src="mukesh-hendry.png" alt="Mukesh Hendry">
+            </div>
+            <div class="player-info">
+                <span class="player-number">29</span>
+                <span class="player-name">Mukesh Hendry</span>
+                <span class="player-country">
+                    <img src="india-flag.png.png" alt="India Flag">
+                </span>
+                <span class="player-position">Defender</span>
+            </div>
+        </div>
+
+        <!-- Player 4 -->
+        <div class="player-box">
+            <div class="player-image">
+                <img src="sachin.png" alt="Sachin">
+            </div>
+            <div class="player-info">
+                <span class="player-number">26</span>
+                <span class="player-name">Sachin</span>
+                <span class="player-country">
+                    <img src="india-flag.png.png" alt="India Flag">
+                </span>
+                <span class="player-position">Defender</span>
+            </div>
+        </div>
+
+        <!-- Player 5 -->
+        <div class="player-box">
+            <div class="player-image">
+                <img src="bebin.png" alt="Bebin">
+            </div>
+            <div class="player-info">
+                <span class="player-number">12</span>
+                <span class="player-name">Bebin</span>
+                <span class="player-country">
+                    <img src="india-flag.png.png" alt="India Flag">
+                </span>
+                <span class="player-position">Defender</span>
+            </div>
+        </div>
+
+        
+        <!-- Player 6 -->
+        <div class="player-box">
+            <div class="player-image">
+                <img src="atheesh-john.png" alt="Atheesh John">
+            </div>
+            <div class="player-info">
+                <span class="player-number">23</span>
+                <span class="player-name">Atheesh John</span>
+                <span class="player-country">
+                    <img src="india-flag.png.png" alt="India Flag">
+                </span>
+                <span class="player-position">Midfielder</span>
+            </div>
+        </div>
+
+        <!-- Player 7 -->
+        <div class="player-box">
+            <div class="player-image">
+                <img src="aniston.png" alt="Aniston">
+            </div>
+            <div class="player-info">
+                <span class="player-number">27</span>
+                <span class="player-name">Aniston</span>
+                <span class="player-country">
+                    <img src="india-flag.png.png" alt="India Flag">
+                </span>
+                <span class="player-position">Midfielder</span>
+            </div>
+        </div>
+
+        <!-- Player 8 -->
+        <div class="player-box">
+            <div class="player-image">
+                <img src="sukesh.png" alt="Sukesh">
+            </div>
+            <div class="player-info">
+                <span class="player-number">18</span>
+                <span class="player-name">Sukesh</span>
+                <span class="player-country">
+                    <img src="india-flag.png.png" alt="India Flag">
+                </span>
+                <span class="player-position">Forward</span>
+            </div>
+        </div>
+
+
+        <!-- Player 9 -->
+        <div class="player-box">
+            <div class="player-image">
+                <img src="beniston.png" alt="Beniston">
+            </div>
+            <div class="player-info">
+                <span class="player-number">17</span>
+                <span class="player-name">Beniston</span>
+                <span class="player-country">
+                    <img src="india-flag.png.png" alt="India Flag">
+                </span>
+                <span class="player-position">Forward</span>
+            </div>
+        </div>
+
+        <!-- Player 10 -->
+        <div class="player-box">
+            <div class="player-image">
+                <img src="tinu.png" alt="Tinu">
+            </div>
+            <div class="player-info">
+                <span class="player-number">45</span>
+                <span class="player-name">Tinu</span>
+                <span class="player-country">
+                    <img src="india-flag.png.png" alt="India Flag">
+                </span>
+                <span class="player-position">Forward</span>
+            </div>
+        </div>
+
+        <!-- Player 11 -->
+        <div class="player-box">
+            <div class="player-image">
+                <img src="bijosh.png" alt="Bijosh">
+            </div>
+            <div class="player-info">
+                <span class="player-number">7</span>
+                <span class="player-name">Bijosh</span>
+                <span class="player-country">
+                    <img src="india-flag.png.png" alt="India Flag">
+                </span>
+                <span class="player-position">Forward</span>
+            </div>
+        </div>
         </section>
     </main>
     <footer>

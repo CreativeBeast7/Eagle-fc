@@ -90,30 +90,30 @@
 
         #banner {
             text-align: center;
-            padding: 50px;
-            background: linear-gradient(135deg, #cce5ff, #80b3ff); /* Light blue gradient background */
+            padding: 30px; /* Reduced padding for a more rectangular look */
+            background: linear-gradient(135deg, #b3d7e7, #ffffff); /* Banner gradient */
             animation: fadeIn 2s ease-in-out;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Box shadow effect */
-            border-radius: 10px; /* Rounded corners */
-            margin: 20px; /* Margin to separate from other content */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Box shadow for the banner */
+            border-radius: 10px; /* Rounded corners for the banner */
+            margin: 20px; /* Added margin around the banner */
+            width: calc(100% - 40px); /* Full width minus margin */
         }
 
         #banner h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
             animation: slideInFromLeft 1s ease-in-out;
-            color: #0c0b2a; /* Updated header color for visibility */
         }
 
         #banner p {
             font-size: 1.2em;
-            color: #0c0b2a; /* Updated paragraph color for visibility */
             animation: slideInFromRight 1s ease-in-out;
         }
-
+        
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+            
         }
 
         @keyframes slideInFromLeft {

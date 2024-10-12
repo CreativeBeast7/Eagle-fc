@@ -88,10 +88,13 @@
 
         #banner {
             text-align: center;
-            padding: 50px;
-            margin: 1cm; /* Adds a 1cm margin outside */
-            background: linear-gradient(to bottom right, #99c2ff, #b3e0ff); /* Light blue gradient */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            padding: 30px; /* Reduced padding for a more rectangular look */
+            background: linear-gradient(135deg, #b3d7e7, #ffffff); /* Banner gradient */
+            animation: fadeIn 2s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Box shadow for the banner */
+            border-radius: 10px; /* Rounded corners for the banner */
+            margin: 20px; /* Added margin around the banner */
+            width: calc(100% - 40px); /* Full width minus margin */
         }
 
         #banner h1 {

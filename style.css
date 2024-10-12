@@ -153,46 +153,66 @@ main {
     background-color: #0056b3;
 }
 
-/* Team Section */
+/* Adjust background colors for the positions */
+
+.goalkeeper {
+    background: linear-gradient(135deg, #e5f3ff, #85d1ff); /* Lighter blue gradient */
+    color: black;
+}
+
+.defender {
+    background: linear-gradient(135deg, #e8f5e9, #a5d6a7); /* Light green gradient */
+    color: black;
+}
+
+.midfielder {
+    background: linear-gradient(135deg, #fff8e1, #ffecb3); /* Light yellow gradient */
+    color: black;
+}
+
+.forward {
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0); /* Light red/pink gradient */
+    color: black;
+}
+
+/* Modify player card hover effect */
+.player-card:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0; /* Slight light color on hover */
+}
+
+/* Adjust player card size for responsive design */
+.player-card {
+    width: 180px; /* Adjust card width */
+    margin: 10px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px; /* Smooth rounded corners */
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    color: #333;
+}
+
+.player-info span {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Team section color and padding adjustments */
 .team-section {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .team-section h2 {
+    color: #333; /* Darker text for clarity */
+    font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
-}
-
-.player-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.player-card {
-    width: 200px;
-    margin: 10px;
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    transition: transform 0.3s;
-}
-
-.player-card:hover {
-    transform: scale(1.05);
-}
-
-.player-card h3 {
-    margin: 10px 0;
-}
-
-.player-card p {
-    margin: 5px 0;
 }
 
 /* Fixtures Section */

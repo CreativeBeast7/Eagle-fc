@@ -12,19 +12,18 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #0c0b2a, #3d779c, #94134c); /* Gradient background */
-            color: navy; /* Change text color to navy blue */
+            background: linear-gradient(to bottom, #0c0b2a, #3d779c, #94134c); /* Gradient background */
         }
 
-        /* Header */
         header {
-            background: linear-gradient(135deg, #ffffff, #3d779c); /* White and light blue gradient */
-            color: #fff;
+            background: linear-gradient(to right, #ffffff, #a3c1e0); /* White and light blue gradient */
+            color: #0c0b2a; /* Text color set for visibility */
             padding: 10px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Header shadow */
+            flex-wrap: wrap;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
         }
 
         header img {
@@ -37,6 +36,8 @@
             list-style-type: none;
             justify-content: center;
             padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
         }
 
         nav ul li {
@@ -45,12 +46,12 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #0c0b2a; /* Updated link color for visibility */
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #007BFF;
+            color: #007BFF; /* Change color on hover */
         }
 
         form {
@@ -78,13 +79,52 @@
             background-color: #0056b3;
         }
 
+        .user-cart {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .user-cart a {
+            color: #0c0b2a; /* Updated link color for visibility */
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
         /* Banner */
         #banner {
-            background: linear-gradient(135deg, #3d779c, #0c0b2a); /* Gradient blue */
-            color: #fff; /* Text color for banner */
-            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Box shadow for banner */
+            padding: 30px; /* Reduced padding for a more rectangular look */
+            background: linear-gradient(135deg, #b3d7e7, #ffffff); /* Banner gradient */
+            animation: fadeIn 2s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Box shadow for the banner */
+            border-radius: 10px; /* Rounded corners for the banner */
+            margin: 20px; /* Added margin around the banner */
+            width: calc(100% - 40px); /* Full width minus margin */
+        }
+
+        #banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: slideInFromLeft 1s ease-in-out;
+        }
+
+        #banner p {
+            font-size: 1.2em;
+            animation: slideInFromRight 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
         }
 
         /* Create account container */

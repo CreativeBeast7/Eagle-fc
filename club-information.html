@@ -89,18 +89,24 @@
 
         #banner {
             text-align: center;
-            padding: 50px;
-            background-color: #ADD8E6;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            padding: 30px; /* Reduced padding for a more rectangular look */
+            background: linear-gradient(135deg, #b3d7e7, #ffffff); /* Banner gradient */
             animation: fadeIn 2s ease-in-out;
-            border-radius: 10px;
-            margin: 1cm 0; /* Added 1cm margin to the banner */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Box shadow for the banner */
+            border-radius: 10px; /* Rounded corners for the banner */
+            margin: 20px; /* Added margin around the banner */
+            width: calc(100% - 40px); /* Full width minus margin */
         }
 
         #banner h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
             animation: slideInFromLeft 1s ease-in-out;
+        }
+
+        #banner p {
+            font-size: 1.2em;
+            animation: slideInFromRight 1s ease-in-out;
         }
 
         #banner p {
