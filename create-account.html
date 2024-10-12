@@ -90,44 +90,7 @@
             margin-left: 10px;
         }
 
-        /* Banner */
-        #banner {
-            text-align: center;
-            padding: 30px; /* Reduced padding for a more rectangular look */
-            background: linear-gradient(135deg, #b3d7e7, #ffffff); /* Banner gradient */
-            animation: fadeIn 2s ease-in-out;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Box shadow for the banner */
-            border-radius: 10px; /* Rounded corners for the banner */
-            margin: 20px; /* Added margin around the banner */
-            width: calc(100% - 40px); /* Full width minus margin */
-        }
-
-        #banner h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            animation: slideInFromLeft 1s ease-in-out;
-        }
-
-        #banner p {
-            font-size: 1.2em;
-            animation: slideInFromRight 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideInFromLeft {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
-        }
-
-        @keyframes slideInFromRight {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-        }
-
-        /* Create account container */
+        /* Create Account container */
         .create-account-container {
             width: 100%;
             max-width: 400px;
@@ -163,7 +126,7 @@
             width: 100%;
             padding: 10px;
             background-color: #007BFF;
-            color: #fff;
+            color: #ffffff;
             border: none;
             border-radius: 3px;
             cursor: pointer;
@@ -180,6 +143,58 @@
             padding: 10px;
             background-color: #333;
             color: #fff;
+        }
+
+        #banner {
+            text-align: center;
+            padding: 30px; /* Reduced padding for a more rectangular look */
+            background: linear-gradient(135deg, #b3d7e7, #ffffff); /* Banner gradient */
+            animation: fadeIn 2s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Box shadow for the banner */
+            border-radius: 10px; /* Rounded corners for the banner */
+            margin: 20px; /* Added margin around the banner */
+            width: calc(100% - 40px); /* Full width minus margin */
+        }
+
+        #banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: slideInFromLeft 1s ease-in-out;
+        }
+
+        #banner p {
+            font-size: 1.2em;
+            animation: slideInFromRight 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
         }
 
         /* Responsive design for tablets and mobile */
@@ -222,34 +237,25 @@
                 <li><a href="fixtures.html">FIXTURES & RESULTS</a></li>
                 <li><a href="club-information.html">CLUB INFORMATION</a></li>
                 <li><a href="about-our-village.html">ABOUT OUR VILLAGE</a></li>
+                <li><a href="profile.html">PROFILE</a></li>
+                <li><a href="forgot-password.html">FORGOT PASSWORD</a></li>
+                <li><a href="create-account.html">CREATE ACCOUNT</a></li>
             </ul>
-            <form action="/search" method="get">
-                <input type="text" name="search" placeholder="Search...">
-                <button type="submit">Search</button>
-            </form>
-            <div class="user-cart">
-                <a href="account.html">Account</a>
-            </div>
         </nav>
     </header>
 
     <main>
-        <section id="banner">
-            <h1>Eagle FC</h1>
-            <p>Welcome to the official Eagle FC website.</p>
-        </section>
-
         <section class="create-account-container">
             <h2>Create Account</h2>
             <form action="/create-account" method="post">
-                <label for="username"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" required>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
 
                 <label for="email"><b>Email</b></label>
                 <input type="email" placeholder="Enter Email" name="email" required>
 
-                <label for="password"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
 
                 <button type="submit">Create Account</button>
             </form>

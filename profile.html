@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Eagle FC</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add any additional styles here if needed */
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="eagle fc.png" alt="Eagle FC Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="team.html">TEAM INFORMATION</a></li>
+                <li><a href="fixtures.html">FIXTURES & RESULTS</a></li>
+                <li><a href="club-information.html">CLUB INFORMATION</a></li>
+                <li><a href="about-our-village.html">ABOUT OUR VILLAGE</a></li>
+                <li><a href="profile.html">PROFILE</a></li>
+                <li><a href="forgot-password.html">FORGOT PASSWORD</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-container">
+            <h2>Your Profile</h2>
+            <form action="/update-profile" method="post">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Username" name="uname" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="New Password (leave blank to keep current)" name="psw">
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Eagle FC. All Rights Reserved.
+    </footer>
+</body>
+
+</html>

@@ -349,3 +349,54 @@ h1, h2, h3 {
         font-size: 1em; /* Smaller font size for mobile */
     }
 }
+/* Existing styles remain here */
+/* You may already have many of these styles, so just add new ones if needed */
+
+.profile-container, .forgot-password-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2, .forgot-password-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-container label, .forgot-password-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.profile-container input[type="text"],
+.profile-container input[type="password"],
+.profile-container input[type="email"],
+.forgot-password-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.profile-container button,
+.forgot-password-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-container button:hover,
+.forgot-password-container button:hover {
+    background-color: #0056b3;
+}
