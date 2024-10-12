@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eagle FC - Account</title>
+    <title>Eagle FC - Create Account</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Base styles for body */
@@ -12,19 +12,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #0c0b2a, #3d779c, #94134c);
-            color: #fff; /* Change text color to white for better contrast */
+            background: linear-gradient(135deg, #0c0b2a, #3d779c, #94134c); /* Gradient background */
+            color: navy; /* Change text color to navy blue */
         }
 
         /* Header */
         header {
-            background: linear-gradient(to right, #ffffff, #a0d7e6);
+            background: linear-gradient(135deg, #ffffff, #3d779c); /* White and light blue gradient */
             color: #fff;
             padding: 10px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Added shadow */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Header shadow */
         }
 
         header img {
@@ -45,7 +45,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #ffffff;
+            color: #fff;
             transition: color 0.3s;
         }
 
@@ -78,19 +78,17 @@
             background-color: #0056b3;
         }
 
-        .user-cart {
-            display: inline-block;
-            margin-left: 20px;
+        /* Banner */
+        #banner {
+            background: linear-gradient(135deg, #3d779c, #0c0b2a); /* Gradient blue */
+            color: #fff; /* Text color for banner */
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Box shadow for banner */
         }
 
-        .user-cart a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 10px;
-        }
-
-        /* Login container */
-        .login-container {
+        /* Create account container */
+        .create-account-container {
             width: 100%;
             max-width: 400px;
             margin: 50px auto;
@@ -101,18 +99,19 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .login-container h2 {
+        .create-account-container h2 {
             text-align: center;
             margin-bottom: 20px;
         }
 
-        .login-container label {
+        .create-account-container label {
             display: block;
             margin-bottom: 5px;
         }
 
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
+        .create-account-container input[type="text"],
+        .create-account-container input[type="password"],
+        .create-account-container input[type="email"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
@@ -120,57 +119,19 @@
             border-radius: 3px;
         }
 
-        .login-container button {
+        .create-account-container button {
             width: 100%;
             padding: 10px;
             background-color: #007BFF;
-            color: #ffffff;
+            color: #fff;
             border: none;
             border-radius: 3px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
-        .login-container button:hover {
+        .create-account-container button:hover {
             background-color: #0056b3;
-        }
-
-        .login-container .psw {
-            float: right;
-            padding-top: 10px;
-        }
-
-        .login-container .psw a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .login-container .psw a:hover {
-            text-decoration: underline;
-        }
-
-        .create-account-link {
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .create-account-link a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .create-account-link a:hover {
-            text-decoration: underline;
-        }
-
-        /* Banner section */
-        #banner {
-            background: linear-gradient(to right, #3d779c, #007BFF);
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Added shadow to banner */
-            margin: 1cm; /* 1 cm margin from outside */
-            text-align: center;
         }
 
         /* Footer */
@@ -192,14 +153,14 @@
                 flex-direction: column;
             }
 
-            .login-container {
+            .create-account-container {
                 width: 90%;
                 margin: 20px auto;
             }
         }
 
         @media (max-width: 480px) {
-            .login-container {
+            .create-account-container {
                 width: 100%;
                 padding: 15px;
             }
@@ -238,26 +199,20 @@
             <p>Welcome to the official Eagle FC website.</p>
         </section>
 
-        <section class="login-container">
-            <h2>Login</h2>
-            <form action="/login" method="post">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+        <section class="create-account-container">
+            <h2>Create Account</h2>
+            <form action="/create-account" method="post">
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required>
 
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-                <div class="psw">
-                    <a href="#">Forgot password?</a>
-                </div>
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+
+                <button type="submit">Create Account</button>
             </form>
-            <div class="create-account-link">
-                <p>Don't have an account? <a href="create-account.html">Create one</a></p>
-            </div>
         </section>
     </main>
 

@@ -10,16 +10,18 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom, #0c0b2a, #3d779c, #94134c); /* Gradient background */
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background: linear-gradient(to right, #ffffff, #a3c1e0); /* White and light blue gradient */
+            color: #0c0b2a; /* Text color set for visibility */
             padding: 10px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
         }
 
         header img {
@@ -32,6 +34,8 @@
             list-style-type: none;
             justify-content: center;
             padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
         }
 
         nav ul li {
@@ -40,12 +44,12 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #0c0b2a; /* Updated link color for visibility */
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #007BFF;
+            color: #007BFF; /* Change color on hover */
         }
 
         form {
@@ -79,7 +83,7 @@
         }
 
         .user-cart a {
-            color: #fff;
+            color: #0c0b2a; /* Updated link color for visibility */
             text-decoration: none;
             margin-left: 10px;
         }
@@ -87,18 +91,23 @@
         #banner {
             text-align: center;
             padding: 50px;
-            background-color: #fff;
+            background: linear-gradient(135deg, #cce5ff, #80b3ff); /* Light blue gradient background */
             animation: fadeIn 2s ease-in-out;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Box shadow effect */
+            border-radius: 10px; /* Rounded corners */
+            margin: 20px; /* Margin to separate from other content */
         }
 
         #banner h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
             animation: slideInFromLeft 1s ease-in-out;
+            color: #0c0b2a; /* Updated header color for visibility */
         }
 
         #banner p {
             font-size: 1.2em;
+            color: #0c0b2a; /* Updated paragraph color for visibility */
             animation: slideInFromRight 1s ease-in-out;
         }
 
@@ -121,21 +130,25 @@
             display: flex;
             justify-content: space-around;
             margin: 20px 0;
+            flex-wrap: wrap;
         }
 
         .match {
-            border: 1px solid #ccc;
+            border: 1px solid #007BFF; /* Color of the border */
             padding: 10px;
-            width: 45%;
+            width: 35%; /* Width adjusted to medium size */
             text-align: center;
             cursor: pointer;
             transition: transform 0.3s;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #e0f7fa, #80deea); /* Gradient background */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Background shadow */
+            margin-bottom: 20px;
+            border-radius: 10px; /* Rounded corners */
         }
 
         .match:hover {
             transform: scale(1.05);
+            background: linear-gradient(135deg, #b2ebf2, #4dd0e1); /* Darker gradient on hover */
         }
 
         .match img {
@@ -166,6 +179,79 @@
             cursor: pointer;
             font-size: 1.5em;
         }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 1024px) {
+            header, .matches {
+                flex-direction: column;
+            }
+            
+            .match {
+                width: 90%;
+            }
+
+            #banner h1 {
+                font-size: 2em;
+            }
+
+            #banner p {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header img {
+                height: 40px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .match {
+                width: 90%;
+                margin-bottom: 15px;
+            }
+
+            #banner h1 {
+                font-size: 1.8em;
+            }
+
+            #banner p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                justify-content: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            .match {
+                width: 100%;
+            }
+
+            #banner h1 {
+                font-size: 1.5em;
+            }
+
+            #banner p {
+                font-size: 0.9em;
+            }
+
+            form, .user-cart {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -184,8 +270,7 @@
                 <button type="submit">Search</button>
             </form>
             <div class="user-cart">
-                <a href="#account">Account</a>
-                <a href="#cart">Cart</a>
+                <a href="account.html">Account</a>
             </div>
         </nav>
     </header>
@@ -204,7 +289,6 @@
                     <p>Date: 2024-10-15</p>
                     <p>Tickets Available</p>
                 </div>
-                <!-- Add more matches as needed -->
             </div>
         </section>
         <section id="match-results">
@@ -221,40 +305,41 @@
                     <img src="Odisha_FC_logo.svg.png" alt="Eagle FC Logo">
                     <span>vs</span>
                     <img src="FC_Goa_logo.svg.png" alt="Opponent Logo">
-                    <p>Score: 3-0</p>
+                    <p>Score: 2-2</p>
                     <p>Highlights Available</p>
                 </div>
-                <!-- Add more results as needed -->
             </div>
         </section>
+        <div id="popup-match1" class="popup">
+            <div class="close" onclick="closePopup('match1')">&times;</div>
+            <h2>Match Details</h2>
+            <p>Match between Eagle FC and Hyderabad FC.</p>
+            <p>Date: 2024-10-15</p>
+            <p>Venue: St Marys Ground</p>
+            <p>Time: 4:00 PM</p>
+        </div>
+        <div id="popup-result1" class="popup">
+            <div class="close" onclick="closePopup('result1')">&times;</div>
+            <h2>Match Result Details</h2>
+            <p>Eagle FC won against Mumbai City FC.</p>
+            <p>Date: 2024-10-08</p>
+            <p>Score: 3-0</p>
+        </div>
+        <div id="popup-result2" class="popup">
+            <div class="close" onclick="closePopup('result2')">&times;</div>
+            <h2>Match Result Details</h2>
+            <p>Eagle FC won against FC Goa.</p>
+            <p>Date: 2024-10-05</p>
+            <p>Score: 3-0</p>
+        </div>
     </main>
-    <footer>
-        <!-- Footer content goes here -->
-    </footer>
-
-    <!-- Popup for match summary -->
-    <div id="match1" class="popup">
-        <span class="close" onclick="closePopup('match1')">×</span>
-        <h2>Match Summary</h2>
-        <p>Details about the match...</p>
-    </div>
-    <div id="result1" class="popup">
-        <span class="close" onclick="closePopup('result1')">×</span>
-        <h2>Match Summary</h2>
-        <p>Nickson score 2 goals become the player of the match and sukesh score 1 goal, GK hainz whith the good saves and clean sheet.</p>
-    </div>
-    <div id="result2" class="popup">
-        <span class="close" onclick="closePopup('result2')">×</span>
-        <h2>Match Summary</h2>
-        <p>Atheesh score hatrick and become the man of the match . Once again Hainz show his skills and have clean sheet...</p>
-    </div>
-
     <script>
-        function showPopup(id) {
-            document.getElementById(id).classList.add('active');
+        function showPopup(matchId) {
+            document.getElementById('popup-' + matchId).classList.add('active');
         }
-        function closePopup(id) {
-            document.getElementById(id).classList.remove('active');
+
+        function closePopup(matchId) {
+            document.getElementById('popup-' + matchId).classList.remove('active');
         }
     </script>
 </body>

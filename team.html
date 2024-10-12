@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eagle FC - Team Information</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <style>
         /* Basic CSS for animations and styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #0c0b2a, #3d779c, #94134c); /* Gradient background */
+            color: #fff; /* Default text color */
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background: linear-gradient(135deg, #ffffff, #80b3ff); /* White to light blue gradient */
+            color: #000; /* Dark text for contrast */
             padding: 10px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Box shadow effect */
         }
 
         header img {
@@ -32,6 +35,7 @@
             list-style-type: none;
             justify-content: center;
             padding: 0;
+            margin: 0;
         }
 
         nav ul li {
@@ -40,12 +44,12 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #000; /* Dark text color for links */
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #007BFF;
+            color: #007BFF; /* Change link color on hover */
         }
 
         form {
@@ -63,14 +67,14 @@
             padding: 5px 10px;
             border: none;
             border-radius: 3px;
-            background-color: #007BFF;
+            background-color: #007BFF; /* Button color */
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         form button:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Darker button on hover */
         }
 
         .user-cart {
@@ -79,26 +83,31 @@
         }
 
         .user-cart a {
-            color: #fff;
+            color: #000; /* Dark text color for account link */
             text-decoration: none;
             margin-left: 10px;
         }
 
         #banner {
             text-align: center;
-            padding: 50px;
-            background-color: #fff;
+            padding: 40px; /* Padding inside the banner */
+            margin: 20px 0; /* Margin for separation */
+            background: linear-gradient(135deg, #007BFF, #80b3ff); /* Blue gradient for the banner */
+            border-radius: 8px; /* Rounded corners for the banner */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Box shadow effect */
             animation: fadeIn 2s ease-in-out;
         }
 
         #banner h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
+            color: black; /* Heading color */
             animation: slideInFromLeft 1s ease-in-out;
         }
 
         #banner p {
             font-size: 1.2em;
+            color: #333; /* Subtitle color */
             animation: slideInFromRight 1s ease-in-out;
         }
 
@@ -119,14 +128,16 @@
 
         .team-section {
             padding: 20px;
-            background-color: #fff;
             margin: 20px;
+            background: linear-gradient(135deg, #007BFF, #FFFFFF); /* Blue to White gradient */
+            border-radius: 8px; /* Rounded corners for the team section */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .team-section h2 {
             text-align: center;
             margin-bottom: 20px;
+            color: navy; /* Navy blue color for the heading */
         }
 
         .player-list {
@@ -140,14 +151,9 @@
             margin: 10px;
             text-align: center;
             padding: 10px;
-            border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #f9f9f9;
             transition: transform 0.3s;
-        }
-
-        .player-card:hover {
-            transform: scale(1.05);
+            color: white; /* Default text color for player cards */
         }
 
         .player-card h3 {
@@ -156,6 +162,104 @@
 
         .player-card p {
             margin: 5px 0;
+        }
+
+        /* Position Specific Background Colors */
+        .goalkeeper {
+            background: linear-gradient(135deg, #000, #007BFF); /* Black and Blue for Goalkeeper */
+        }
+
+        .defender {
+            background: linear-gradient(135deg, #000, #28A745); /* Black and Green for Defender */
+        }
+
+        .midfielder {
+            background: linear-gradient(135deg, #000, #FFC107); /* Black and Yellow for Midfielder */
+        }
+
+        .forward {
+            background: linear-gradient(135deg, #000, #DC3545); /* Black and Red for Forward */
+        }
+
+        .player-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 1024px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .player-list {
+                justify-content: center;
+            }
+
+            .player-card {
+                width: 150px; /* Smaller player cards for tablets */
+            }
+
+            #banner h1 {
+                font-size: 2em;
+            }
+
+            #banner p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .player-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .player-card {
+                width: 100%; /* Full-width player cards for mobile */
+                max-width: 400px; /* Keep a max width */
+            }
+
+            #banner {
+                padding: 30px;
+            }
+
+            #banner h1 {
+                font-size: 1.8em;
+            }
+
+            #banner p {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #banner h1 {
+                font-size: 1.5em;
+            }
+
+            #banner p {
+                font-size: 0.8em;
+            }
+
+            .team-section {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .player-card {
+                padding: 5px;
+            }
         }
     </style>
 </head>
@@ -175,92 +279,89 @@
                 <button type="submit">Search</button>
             </form>
             <div class="user-cart">
-                <a href="#account">Account</a>
-                <a href="#cart">Cart</a>
+                <a href="account.html">Account</a>
             </div>
         </nav>
     </header>
     <main>
         <section id="banner">
             <h1>Eagle FC</h1>
-            <p>Welcome to the official Eagle FC website.</p>
+            <p>Welcome to the official team information page!</p>
         </section>
-        <section id="team-info">
-            <div class="team-section">
-                <h2>First Team Players</h2>
-                <div class="player-list">
-                    <div class="player-card">
-                        <h3>Hainz MJ</h3>
-                        <p>Position: Goalkeeper</p>
-                        <p>Number: 13</p>
-                        <p>Nationality: IND</p>
-                    </div>
-                    <div class="player-card">
-                        <h3>Antony Raju</h3>
-                        <p>Position: Defender</p>
-                        <p>Number: 3</p>
-                        <p>Nationality: IND</p>
-                    </div>
-                    <div class="player-card">
-                        <h3>Mukesh Hendry</h3>
-                        <p>Position: Defender</p>
-                        <p>Number: 29</p>
-                        <p>Nationality: IND</p>
-                    </div>
-                    <div class="player-card">
-                        <h3>Sachin</h3>
-                        <p>Position: Defender</p>
-                        <p>Number: 26</p>
-                        <p>Nationality: IND</p>
-                    </div>
-                    <div class="player-card">
-                        <h3>Sukesh</h3>
-                        <p>Position: Forward</p>
-                        <p>Number: 18</p>
-                        <p>Nationality: IND</p>
-                    </div>
-                    <div class="player-card">
-                        <h3>Atheesh John</h3>
-                        <p>Position: Midfielder</p>
-                        <p>Number: 23</p>
-                        <p>Nationality: IND</p>
-                    </div>
-                    <div class="player-card">
-                        <h3>Aniston</h3>
-                        <p>Position: Midfielder</p>
-                        <p>Number: 27</p>
-                        <p>Nationality: IND</p>
-                    </div>
-                    <div class="player-card">
-                        <h3>Beniston</h3>
-                        <p>Position: Forward</p>
-                        <p>Number: 17</p>
-                        <p>Nationality: IND</p>
-                    </div>
-                    <div class="player-card">
-                        <h3>Tinu</h3>
-                        <p>Position: Forward</p>
-                        <p>Number: 45</p>
-                        <p>Nationality: IND</p>
-                    </div>
-                    <div class="player-card">
-                        <h3>Bijosh</h3>
-                        <p>Position: Forward</p>
-                        <p>Number: 7</p>
-                        <p>Nationality: IND</p>
-                    </div>
-                    <div class="player-card">
-                        <h3>Bebin</h3>
-                        <p>Position: Defender</p>
-                        <p>Number: 12</p>
-                        <p>Nationality: IND</p>
-                    </div>
+        <section class="team-section">
+            <h2>Our Squad</h2>
+            <div class="player-list">
+                <div class="player-card goalkeeper">
+                    <h3>Hainz MJ</h3>
+                    <p>Position: Goalkeeper</p>
+                    <p>Number: 13</p>
+                    <p>Country: India (IND)</p>
+                </div>
+                <div class="player-card defender">
+                    <h3>Antony Raju</h3>
+                    <p>Position: Defender</p>
+                    <p>Number: 3</p>
+                    <p>Country: India (IND)</p>
+                </div>
+                <div class="player-card defender">
+                    <h3>Mukesh Hendry</h3>
+                    <p>Position: Defender</p>
+                    <p>Number: 29</p>
+                    <p>Country: India (IND)</p>
+                </div>
+                <div class="player-card defender">
+                    <h3>Sachin</h3>
+                    <p>Position: Defender</p>
+                    <p>Number: 26</p>
+                    <p>Country: India (IND)</p>
+                </div>
+                <div class="player-card forward">
+                    <h3>Sukesh</h3>
+                    <p>Position: Forward</p>
+                    <p>Number: 18</p>
+                    <p>Country: India (IND)</p>
+                </div>
+                <div class="player-card midfielder">
+                    <h3>Atheesh John</h3>
+                    <p>Position: Midfielder</p>
+                    <p>Number: 23</p>
+                    <p>Country: India (IND)</p>
+                </div>
+                <div class="player-card midfielder">
+                    <h3>Aniston</h3>
+                    <p>Position: Midfielder</p>
+                    <p>Number: 27</p>
+                    <p>Country: India (IND)</p>
+                </div>
+                <div class="player-card forward">
+                    <h3>Beniston</h3>
+                    <p>Position: Forward</p>
+                    <p>Number: 17</p>
+                    <p>Country: India (IND)</p>
+                </div>
+                <div class="player-card forward">
+                    <h3>Tinu</h3>
+                    <p>Position: Forward</p>
+                    <p>Number: 45</p>
+                    <p>Country: India (IND)</p>
+                </div>
+                <div class="player-card forward">
+                    <h3>Bijosh</h3>
+                    <p>Position: Forward</p>
+                    <p>Number: 7</p>
+                    <p>Country: India (IND)</p>
+                </div>
+                <div class="player-card defender">
+                    <h3>Bebin</h3>
+                    <p>Position: Defender</p>
+                    <p>Number: 12</p>
+                    <p>Country: India (IND)</p>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <!-- Footer content goes here -->
+        <p>&copy; 2024 Eagle FC. All rights reserved.</p>
     </footer>
 </body>
 </html>

@@ -3,245 +3,68 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #e2e2e2, #ffffff);
+    background-image: url('pattern.png'); /* Replace with your pattern image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: rgba(0, 123, 255, 0.8);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
 }
 
 header img {
-    height: 50px;
-    margin-left: 20px;
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
     display: flex;
-    list-style-type: none;
-    justify-content: center;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #007BFF;
-}
-
-form {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-form input[type="text"] {
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-}
-
-form button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-.user-cart {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.user-cart a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-#banner {
-    text-align: center;
-    padding: 50px;
-    background-color: #fff;
-    animation: fadeIn 2s ease-in-out;
-}
-
-#banner h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    animation: slideInFromLeft 1s ease-in-out;
-}
-
-#banner p {
-    font-size: 1.2em;
-    animation: slideInFromRight 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideInFromLeft {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
-}
-
-@keyframes slideInFromRight {
-    from { transform: translateX(100%); }
-    to { transform: translateX(0); }
-}
-
-.matches {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.match {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 45%;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.match:hover {
-    transform: scale(1.05);
-}
-
-.match img {
-    height: 40px;
-    margin: 10px;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-
-.popup.active {
-    display: block;
-}
-
-.popup .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 1.5em;
-}
-/* Basic CSS for animations and styling */
-body {
-    font-family: Arial, sans-serif;
+    list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header img {
-    height: 50px;
-    margin-left: 20px;
-}
-
-nav ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    padding: 0;
 }
 
 nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+nav a {
+    color: white;
     text-decoration: none;
-    color: #fff;
+    font-weight: bold;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #007BFF;
-}
-
-form {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-form input[type="text"] {
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-}
-
-form button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #0056b3;
+nav a:hover {
+    color: #ffdd57;
 }
 
 .user-cart {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.user-cart a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 10px;
+    margin-left: auto;
 }
 
 #banner {
-    text-align: center;
-    padding: 50px;
-    background-color: #fff;
+    background-image: url('football-field.jpg'); /* Replace with an actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -271,6 +94,66 @@ form button:hover {
     to { transform: translateX(0); }
 }
 
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+/* Login and Create Account Containers */
+.login-container,
+.create-account-container {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.login-container h2,
+.create-account-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.login-container label,
+.create-account-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.create-account-container input[type="text"],
+.create-account-container input[type="email"],
+.create-account-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #007BFF;
+    border-radius: 3px;
+}
+
+.login-container button,
+.create-account-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover,
+.create-account-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Team Section */
 .team-section {
     padding: 20px;
     background-color: #fff;
@@ -311,118 +194,8 @@ form button:hover {
 .player-card p {
     margin: 5px 0;
 }
-/* Basic CSS for animations and styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header img {
-    height: 50px;
-    margin-left: 20px;
-}
-
-nav ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #007BFF;
-}
-
-form {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-form input[type="text"] {
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-}
-
-form button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-.user-cart {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.user-cart a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-#banner {
-    text-align: center;
-    padding: 50px;
-    background-color: #fff;
-    animation: fadeIn 2s ease-in-out;
-}
-
-#banner h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    animation: slideInFromLeft 1s ease-in-out;
-}
-
-#banner p {
-    font-size: 1.2em;
-    animation: slideInFromRight 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideInFromLeft {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
-}
-
-@keyframes slideInFromRight {
-    from { transform: translateX(100%); }
-    to { transform: translateX(0); }
-}
-
+/* Fixtures Section */
 .fixtures-section {
     padding: 20px;
     background-color: #fff;
@@ -462,162 +235,97 @@ form button:hover {
 .match-card p {
     margin: 5px 0;
 }
-/* Basic CSS for animations and styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+
+/* Honours Section */
+.honours {
+    background-color: #f2f2f2;
+    padding: 60px 20px;
+    text-align: center;
+    animation: zoomIn 1s ease-in-out;
 }
 
-header {
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-header img {
-    height: 50px;
-    margin-left: 20px;
-}
-
-nav ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    padding: 0;
-}
-
-nav ul li {
-/* Basic CSS for animations and styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header img {
-    height: 50px;
-    margin-left: 20px;
-}
-
-nav ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
+/* Page-Specific Styles */
+h1, h2, h3 {
     color: #007BFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-form {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-form input[type="text"] {
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-}
-
-form button {
-    padding: 5px 10px;
-    border: none;
-    border-radius:
-}
-
-
-    /* Additional CSS for the login form */
-.login-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 50px auto;
+/* Club Information and About Our Village */
+.club-info,
+.about-village {
+    margin: 20px 0;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.club-info h2,
+.about-village h2 {
+    color: #28a745;
 }
 
-.login-container label {
-    display: block;
-    margin-bottom: 5px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .login-container,
+    .create-account-container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .player-card {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .match-card {
+        width: 100%; /* Full width for mobile */
+    }
 }
 
-.login-container input[type="text"],
-.login-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
+@media (max-width: 480px) {
+    .login-container,
+    .create-account-container {
+        width: 100%;
+        padding: 15px;
+    }
 
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+    header img {
+        height: 40px;
+    }
 
-.login-container button:hover {
-    background-color: #0056b3;
-}
+    #banner h1 {
+        font-size: 2em; /* Smaller font size for mobile */
+    }
 
-.login-container .cancelbtn {
-    background-color: #f44336;
+    #banner p {
+        font-size: 1em; /* Smaller font size for mobile */
+    }
 }
-
-.login-container .cancelbtn:hover {
-    background-color: #d32f2f;
-}
-
-.login-container .psw {
-    float: right;
-    padding-top: 10px;
-}
-
-.login-container .psw a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.login-container .psw a:hover {
-    text-decoration: underline;
-}
-

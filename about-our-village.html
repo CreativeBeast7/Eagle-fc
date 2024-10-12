@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eagle FC - About Our Village</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <style>
         /* Basic CSS for animations and styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom right, #0c0b2a, #3d779c, #94134c);
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background: linear-gradient(to right, #b3e0ff, #99c2ff);
+            color: #000;
             padding: 10px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         header img {
@@ -40,7 +42,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #000;
             transition: color 0.3s;
         }
 
@@ -79,7 +81,7 @@
         }
 
         .user-cart a {
-            color: #fff;
+            color: #000;
             text-decoration: none;
             margin-left: 10px;
         }
@@ -87,8 +89,9 @@
         #banner {
             text-align: center;
             padding: 50px;
-            background-color: #fff;
-            animation: fadeIn 2s ease-in-out;
+            margin: 1cm; /* Adds a 1cm margin outside */
+            background: linear-gradient(to bottom right, #99c2ff, #b3e0ff); /* Light blue gradient */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
         }
 
         #banner h1 {
@@ -161,6 +164,43 @@
         .village p {
             margin: 5px 0;
         }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 1200px) {
+            .village {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header img {
+                margin-left: 10px;
+            }
+
+            .village {
+                width: 90%;
+            }
+
+            #banner h1 {
+                font-size: 2em;
+            }
+
+            #banner p {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -180,7 +220,6 @@
             </form>
             <div class="user-cart">
                 <a href="account.html">Account</a>
-                <a href="cart.html">Cart</a>
             </div>
         </nav>
     </header>
@@ -195,23 +234,23 @@
                 <div class="village">
                     <img src="christ the redeemer.webp" alt="Vizhinjam">
                     <h3>Vizhinjam</h3>
-                    <p>Vizhinjam is a coastal town located in the southern part of Kerala, known for its scenic beauty and vibrant fishing community. It has a rich maritime history and is home to the Vizhinjam International Seaport, which is set to become a major hub for global trade. The town’s picturesque beaches and cultural heritage make it a unique blend of tradition and modern development.</p>
+                    <p>Vizhinjam is a coastal town located in the southern part of Kerala, known for its scenic beauty and vibrant fishing community. It has a rich maritime history and is home to the Vizhinjam International Seaport.</p>
                 </div>
                 <div class="village">
                     <img src="st mary.png" alt="Our Lady Of Good Voyage">
                     <h3>Our Lady Of Good Voyage</h3>
-                    <p>The Old Portuguese Church in Vizhinjam, also known as the Vizhinjam St. Mary’s Church, is a historic structure that dates back to the colonial era. Built by the Portuguese in the 16th century, it stands as a symbol of the region’s rich Christian heritage and European influence. Though weathered by time, the church remains an important religious and historical site, reflecting the cultural exchange between Portugal and Kerala.</p>
+                    <p>The Old Portuguese Church in Vizhinjam is a historic structure built by the Portuguese in the 16th century, standing as a symbol of the region’s rich Christian heritage and European influence.</p>
                 </div>
                 <div class="village">
                     <img src="old church.webp" alt="Vizhinjam Old Portuguese Church">
                     <h3>Vizhinjam Old Portuguese Church</h3>
-                    <p>The Old Portuguese Church in Vizhinjam is a historic structure that dates back to the colonial era. Built by the Portuguese in the 16th century, it stands as a symbol of the region’s rich Christian heritage and European influence. Though weathered by time, the church remains an important religious and historical site, reflecting the cultural exchange between Portugal and Kerala.</p>
+                    <p>This 16th-century church remains an important religious and historical site, reflecting the cultural exchange between Portugal and Kerala.</p>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <!-- Footer content goes here -->
+        <p>&copy; 2024 Eagle FC. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
