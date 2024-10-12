@@ -404,3 +404,93 @@ h1, h2, h3 {
     font-family: 'MUFCFont';
     src: url('Manchester\ United\ 20023.ttf') format('opentype');
   }
+ 
+  /* Default styles for large screens (PC/Desktop) */
+  body {
+      font-size: 16px;
+  }
+
+  header img {
+      height: 50px;
+  }
+
+  nav ul {
+      display: flex;
+      justify-content: center;
+  }
+
+  #banner h1 {
+      font-size: 2.5em;
+  }
+
+  .player-box {
+      flex-direction: row;
+      padding: 15px;
+  }
+
+  /* Tablet view */
+  @media only screen and (max-width: 1024px) and (min-width: 601px) {
+      body {
+          font-size: 14px;
+      }
+
+      header img {
+          height: 45px;
+      }
+
+      #banner h1 {
+          font-size: 2.2em;
+      }
+
+      .player-box {
+          flex-direction: row;
+          padding: 10px;
+      }
+  }
+
+  /* Mobile view */
+  @media only screen and (max-width: 600px) {
+      body {
+          font-size: 12px;
+      }
+
+      header img {
+          height: 40px;
+      }
+
+      nav ul {
+          flex-direction: column;
+          align-items: center;
+      }
+
+      nav ul li {
+          margin: 10px 0;
+      }
+
+      #banner h1 {
+          font-size: 1.8em;
+      }
+
+      .squad-section {
+          grid-template-columns: 1fr; /* Stack players vertically */
+      }
+
+      .player-box {
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+      }
+
+      .player-image img {
+          width: 70px;
+          height: 70px;
+      }
+
+      .player-number {
+          font-size: 1.2em;
+      }
+
+      .player-name {
+          font-size: 1em;
+      }
+  }
