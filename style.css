@@ -400,3 +400,7 @@ h1, h2, h3 {
 .forgot-password-container button:hover {
     background-color: #0056b3;
 }
+@font-face {
+    font-family: 'MUFCFont';
+    src: url('Manchester\ United\ 20023.ttf') format('opentype');
+  }
