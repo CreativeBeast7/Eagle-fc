@@ -6,199 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eagle FC Matchday</title>
     <style>
-        /* Add your existing styles here */
-    /* General Styles */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(to bottom, #0c0b2a, #3d779c, #94134c); /* Gradient background */
-    }
-
-    /* Header Styles */
-    header {
-        background: linear-gradient(to right, #ffffff, #a3c1e0); /* White and light blue gradient */
-        color: #0c0b2a;
-        padding: 10px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    }
-
-    header img {
-        height: 80px;
-        margin-left: 20px;
-    }
-
-    /* Navigation Styles */
-    nav ul {
-        display: flex;
-        list-style-type: none;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-        flex-wrap: wrap;
-    }
-
-    nav ul li {
-        margin: 0 15px;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: #0c0b2a;
-        transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-        color: #007BFF; /* Hover color */
-    }
-
-    /* Search form */
-    form {
-        display: inline-block;
-        margin-left: 20px;
-    }
-
-    form input[type="text"] {
-        padding: 5px;
-        border: none;
-        border-radius: 3px;
-    }
-
-    form button {
-        padding: 5px 10px;
-        border: none;
-        border-radius: 3px;
-        background-color: #007BFF;
-        color: #fff;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    form button:hover {
-        background-color: #0056b3;
-    }
-
-    /* Banner Section */
-    #banner {
-        text-align: center;
-        padding: 30px;
-        background: linear-gradient(135deg, #b3d7e7, #ffffff); /* Banner gradient */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-        margin: 20px;
-    }
-
-    #banner h1 {
-        font-size: 2.5em;
-        margin-bottom: 20px;
-    }
-
-    #banner p {
-        font-size: 1.2em;
-    }
-
-    /* Matches Section */
-    .matches {
-        display: flex;
-        justify-content: space-around;
-        margin: 20px 0;
-        flex-wrap: wrap;
-    }
-
-    .match {
-        border: 1px solid #007BFF;
-        padding: 10px;
-        width: 35%;
-        text-align: center;
-        cursor: pointer;
-        background: linear-gradient(135deg, #e0f7fa, #80deea);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        margin-bottom: 20px;
-        border-radius: 10px;
-    }
-
-    /* Media Queries for Responsiveness */
-    @media (max-width: 1024px) {
-        header, .matches {
-            flex-direction: column;
-        }
-        
-        .match {
-            width: 90%;
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0c0b2a, #3d779c, #94134c);
         }
 
-        #banner h1 {
-            font-size: 2em;
-        }
-
-        #banner p {
-            font-size: 1.1em;
-        }
-    }
-
-    @media (max-width: 768px) {
-        header img {
-            height: 40px;
-        }
-
-        nav ul {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin: 10px 0;
-        }
-
-        .match {
-            width: 90%;
-            margin-bottom: 15px;
-        }
-
-        #banner h1 {
-            font-size: 1.8em;
-        }
-
-        #banner p {
-            font-size: 1em;
-        }
-    }
-
-    @media (max-width: 480px) {
+        /* Header Styles */
         header {
-            justify-content: center;
+            background: linear-gradient(to right, #ffffff, #a3c1e0);
+            color: #0c0b2a;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        nav ul {
-            flex-direction: column;
+        header img {
+            height: 80px;
+            margin-left: 20px;
         }
 
-        .match {
-            width: 100%;
-        }
-
-        #banner h1 {
-            font-size: 1.5em;
-        }
-
-        #banner p {
-            font-size: 0.9em;
-        }
-
-        form, .user-cart {
-            margin-left: 0;
-        }
-    }
-
+        /* Navigation Styles */
         nav ul {
             display: flex;
             list-style-type: none;
             justify-content: center;
             padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
         }
 
         nav ul li {
@@ -207,7 +47,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: black; /* Set link color to black */
+            color: #0c0b2a;
             transition: color 0.3s;
         }
 
@@ -215,6 +55,7 @@
             color: #007BFF;
         }
 
+        /* Search form */
         form {
             display: inline-block;
             margin-left: 20px;
@@ -240,26 +81,23 @@
             background-color: #0056b3;
         }
 
-        .user-cart {
-            display: inline-block;
-            margin-left: 20px;
-        }
-
+        /* User Cart */
         .user-cart a {
-            color: black; /* Set account link color to black */
+            color: black;
             text-decoration: none;
             margin-left: 10px;
         }
 
+        /* Banner Section */
         #banner {
             text-align: center;
-            padding: 30px; /* Reduced padding for a more rectangular look */
-            background: linear-gradient(135deg, #b3d7e7, #ffffff); /* Banner gradient */
+            padding: 30px;
+            background: linear-gradient(135deg, #b3d7e7, #ffffff);
             animation: fadeIn 2s ease-in-out;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Box shadow for the banner */
-            border-radius: 10px; /* Rounded corners for the banner */
-            margin: 20px; /* Added margin around the banner */
-            width: calc(100% - 40px); /* Full width minus margin */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin: 20px;
+            width: calc(100% - 40px);
         }
 
         #banner h1 {
@@ -274,86 +112,194 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes slideInFromLeft {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
         }
 
         @keyframes slideInFromRight {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
         }
+
+        /* Match Cards Section */
         section {
             padding: 20px;
         }
 
-        .match-card {
-            background: white;
-            border: 3px solid #00ddff;
-            border-radius: 8px;
-            margin: 10px 0;
-            padding: 15px;
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.2s;
+        /* Fixture Box Styles */
+        .fixture-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            flex-wrap: wrap; /* Allow wrapping of fixture cards */
         }
 
-        .match-card:hover {
-            transform: scale(1.02);
+        .fixture-card {
+            background-color: white;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgb(0, 0, 0);
+            overflow: hidden;
         }
 
-        .match-header {
+        .fixture-header {
+            background-color: #002f6c;
+            color: white;
+            padding: 20px;
+            text-align: center;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+        }
+        /* Animation for card appearance */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1; /* Fully visible */
+                transform: translateY(0); /* Move to original position */
+            }
         }
 
-        .match-logo {
-            width: 50px; /* Adjust size as needed */
+        .fixture-card:hover {
+            transform: scale(1.05); /* Slightly larger on hover */
+        }
+
+        .fixture-header img {
+            height: 50px;
+        }
+
+        .fixture-header div {
+            display: flex;
+            align-items: center;
+        }
+
+        .fixture-header img {
+            height: 50px;
+        }
+
+        .fixture-body {
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .fixture-body h5 {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .fixture-body p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .fixture-body .icon {
             margin-right: 10px;
         }
 
-        .match-info {
-            display: flex;
-            align-items: center;
+        .fixture-body time,
+        .fixture-body .venue {
+            display: block;
+            margin-top: 5px;
         }
 
-        .match-card-popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            z-index: 1000;
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            header,
+            .matches {
+                flex-direction: column;
+            }
+
+            .match {
+                width: 90%;
+            }
+
+            #banner h1 {
+                font-size: 2em;
+            }
+
+            #banner p {
+                font-size: 1.1em;
+            }
         }
 
-        .popup-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        @media (max-width: 768px) {
+            header img {
+                height: 40px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .match {
+                width: 90%;
+                margin-bottom: 15px;
+            }
+
+            #banner h1 {
+                font-size: 1.8em;
+            }
+
+            #banner p {
+                font-size: 1em;
+            }
         }
 
-        .popup-close {
-            cursor: pointer;
-            font-size: 20px;
-        }
+        @media (max-width: 480px) {
+            header {
+                justify-content: center;
+            }
 
-        .popup-images img {
-            width: 100%;
-            height: auto;
-            margin-top: 10px;
+            nav ul {
+                flex-direction: column;
+            }
+
+            .match {
+                width: 100%;
+            }
+
+            #banner h1 {
+                font-size: 1.5em;
+            }
+
+            #banner p {
+                font-size: 0.9em;
+            }
+
+            form,
+            .user-cart {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
         <img src="eagle fc.png" alt="Eagle FC Logo">
@@ -374,116 +320,57 @@
             </div>
         </nav>
     </header>
+
     <main>
         <section id="banner">
             <h1>Eagle FC</h1>
             <p>Welcome to the official Eagle FC website.</p>
         </section>
 
-    <main>
-        <section>
-            <h2>Upcoming Matches</h2>
-            <div class="match-card" onclick="showPopup(3)">
-                <div class="match-header">
-                    <div class="match-info">
-                        <img class="match-logo" src="Odisha_FC_logo.svg.png" alt="Eagle FC Logo"> <!-- Eagle FC Logo -->
+        <section class="matches">
+            <h2>Matches</h2>
+            <div class="fixture-container">
+                <div class="fixture-card">
+                    <div class="fixture-header">
+                        <img src="Odisha_FC_logo.svg.png" alt="Eagle fc" />
+                        <img src="vsl.png" alt="League" />
+                        <img src="Hyderabad_Football_Club.svg.png" alt="Away Team" />
                     </div>
-                    <div class="match-info">
-                        <img class="match-logo" src="Hyderabad_Football_Club.svg.png" alt="hyderabad_fc_logo"> <!-- Opponent Logo -->
+                    <div class="fixture-body">
+                        <h5>Match Day</h5>
+                        <p><span class="icon">🏟️</span><time datetime="2024-10-15T15:00">October 15, 2024 - 15:00</time></p>
+                        <p><span class="icon">📍</span><span class="venue">Stadium Name</span></p>
                     </div>
                 </div>
-                <p>Date: October 16, 2024</p>
-                <p>Time: 4:00 PM</p>
-                <p>Venue: St. Mary's Ground</p>
+
+                <div class="fixture-card">
+                    <div class="fixture-header">
+                        <img src="Odisha_FC_logo.svg.png" alt="Home Team" />
+                        <img src="vsl.png" alt="League" />
+                        <img src="FC_Goa_logo.svg.png" alt="Away Team" />
+                    </div>
+                    <div class="fixture-body">
+                        <h5>Result</h5>
+                        <p>Date: October 8, 2024</p>
+                        <p>Result: Eagle FC 3 - 0 FC Goa</p>
+                    </div>
+                </div>
+
+                <div class="fixture-card">
+                    <div class="fixture-header">
+                        <img src="Odisha_FC_logo.svg.png" alt="Home Team" />
+                        <img src="vsl.png" alt="League" />
+                        <img src="Mumbai_City_FC_logo.svg.png" alt="Away Team" />
+                    </div>
+                    <div class="fixture-body">
+                        <h5>Result</h5>
+                        <p>Date: October 8, 2024</p>
+                        <p>Result: Eagle FC 3 - 0 Mumbai</p>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section>
-            <h2>Past Matches</h2>
-            <div class="match-card" onclick="showPopup(2)">
-                <div class="match-header">
-                    <div class="match-info">
-                        <img class="match-logo" src="Odisha_FC_logo.svg.png" alt="Eagle FC Logo"> <!-- Eagle FC Logo -->
-                    </div>
-                    <div class="match-info">
-                        <img class="match-logo" src="Mumbai_City_FC_logo.svg.png" alt="Mumbai Logo"> <!-- Opponent Logo -->
-                    </div>
-                </div>
-                <p>Date: October 8, 2024</p>
-                <p>Result: Eagle FC 3 - 0 Mumbai</p>
-            </div>
-            <div class="match-card" onclick="showPopup(1)">
-                <div class="match-header">
-                    <div class="match-info">
-                        <img class="match-logo" src="Odisha_FC_logo.svg.png" alt="Eagle FC Logo"> <!-- Eagle FC Logo -->
-                    </div>
-                    <div class="match-info">
-                        <img class="match-logo" src="FC_Goa_logo.svg.png" alt="Hyderabad FC Logo"> <!-- Opponent Logo -->
-                    </div>
-                </div>
-                <p>Date: October 15, 2024</p>
-                <p>Result: Eagle FC 3 - 0 goa</p>
-            </div>
-        </section>
-
-        <div id="match-popup-1" class="match-card-popup">
-            <div class="popup-header">
-                <h3>Eagle FC vs Hyderabad FC</h3>
-                <span class="popup-close" onclick="closePopup(1)">&times;</span>
-            </div>
-            <div class="popup-content">
-                <p>Date: October 15, 2024</p>
-                <p>Time: 4:30 PM</p>
-                <p>Venue: St. Mary's Ground</p>
-                <div class="popup-images">
-                    <img src="eagle_vs_hyderabad.jpg" alt="Eagle FC vs Hyderabad FC">
-                    <img src="hyderabad_fc_crowd.jpg" alt="Hyderabad FC Crowd">
-                    <img src="eagle_fc_celebration.jpg" alt="Eagle FC Celebration">
-                </div>
-            </div>
-        </div>
-        <div id="match-popup-2" class="match-card-popup">
-            <div class="popup-header">
-                <h3>Eagle FC vs Mumbai</h3>
-                <span class="popup-close" onclick="closePopup(2)">&times;</span>
-            </div>
-            <div class="popup-content">
-                <p>Date: October 8, 2024</p>
-                <p>Result: Eagle FC 3 - 0 Mumbai</p>
-                <div class="popup-images">
-                    <img src="eagle_fc_victory.jpg" alt="Eagle FC Victory">
-                    <img src="mumbai_fc_celebration.jpg" alt="Mumbai FC Celebration">
-                    <img src="eagle_fc_fans.jpg" alt="Eagle FC Fans">
-                </div>
-            </div>
-        </div>
-        <div id="match-popup-3" class="match-card-popup">
-            <div class="popup-header">
-                <h3>Eagle FC vs Kerala Blasters</h3>
-                <span class="popup-close" onclick="closePopup(3)">&times;</span>
-            </div>
-            <div class="popup-content">
-                <p>Date: October 22, 2024</p>
-                <p>Time: 7:00 PM</p>
-                <p>Venue: St. Mary's Ground</p>
-                <div class="popup-images">
-                    <img src="eagle_vs_kerala.jpg" alt="Eagle FC vs Kerala Blasters">
-                    <img src="kerala_blasters_fans.jpg" alt="Kerala Blasters Fans">
-                    <img src="eagle_fc_training.jpg" alt="Eagle FC Training">
-                </div>
-            </div>
-        </div>
     </main>
-
-    <script>
-        function showPopup(matchId) {
-            document.getElementById('match-popup-' + matchId).style.display = 'block';
-        }
-
-        function closePopup(matchId) {
-            document.getElementById('match-popup-' + matchId).style.display = 'none';
-        }
-    </script>
 </body>
 
 </html>
