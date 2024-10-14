@@ -3,8 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Eagle FC Matchday</title>
+    <head>
+        <link rel="icon" href="eagle fc.png" type="image/png">      <!-- .png format -->
+     </head>
     <style>
         /* General Styles */
         body {
@@ -154,6 +158,7 @@
             margin-top: 50px;
             flex-wrap: wrap; /* Allow wrapping of fixture cards */
         }
+        
 
         .fixture-card {
             background-color: white;
@@ -173,6 +178,38 @@
             justify-content: space-between;
             align-items: center;
         }
+         /* Add floating styles */
+    .fixture-card:nth-child(odd) {
+        float: left;
+    }
+
+    .fixture-card:nth-child(even) {
+        float: right;
+    }
+
+    .fixture-header {
+        background-color: #002f6c;
+        border-radius: 10px;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .fixture-body {
+        padding: 20px;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+
+    /* Clear floats after the container */
+    .fixture-container::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
         /* Animation for card appearance */
         @keyframes fadeInUp {
             to {
@@ -343,6 +380,7 @@
                         <p><span class="icon">📍</span><span class="venue">Stadium Name</span></p>
                     </div>
                 </div>
+                
 
                 <div class="fixture-card">
                     <div class="fixture-header">
